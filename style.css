@@ -71,7 +71,7 @@
   .brand{ display:flex; align-items:center; gap:10px; font-weight:800; font-size:19px; color:#fff; }
   .brand .mark{
     width:34px; height:34px; border-radius:9px;
-    background: url('assets/favicon.webp') center/cover no-repeat, var(--grad);
+    background: url('assets/favicon.png') center/cover no-repeat, var(--grad);
     display:flex; align-items:center; justify-content:center;
     box-shadow: 0 6px 18px -4px rgba(52,211,153,0.6);
     position:relative;
