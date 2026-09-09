@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<!-- Google tag (gtag.js) -->
+<script>
+  window.addEventListener('load', function() {
+    setTimeout(function() {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-MJH6SQ2ER0';
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-MJH6SQ2ER0');
+    }, 2000);
+  });
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="canonical" href="https://zalithid.id/cek-uuid-minecraft">
+<title>Cek UUID Minecraft dari Username — Alat Gratis &amp; Instan | ZalithID</title>
+<meta name="description" content="Cek UUID Minecraft dari username secara instan dan gratis. Masukkan username, dapatkan UUID (dengan dan tanpa strip) plus avatar akun — bisa juga dipasang sebagai aplikasi.">
+<link rel="icon" href="assets/favicon.webp" type="image/webp">
+<link rel="apple-touch-icon" href="assets/favicon.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#0a0d12">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://zalithid.id/cek-uuid-minecraft">
+<meta property="og:title" content="Cek UUID Minecraft dari Username — Alat Gratis &amp; Instan | ZalithID">
+<meta property="og:description" content="Cek UUID Minecraft dari username secara instan dan gratis. Masukkan username, dapatkan UUID (dengan dan tanpa strip) plus avatar akun.">
+<meta property="og:image" content="assets/og-image.webp">
+<meta property="og:image:alt" content="Banner Zalith Launcher 2 — ikon kubus gradient hijau-ungu dengan tulisan Main Minecraft Java di Android">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="id_ID">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cek UUID Minecraft dari Username — Alat Gratis &amp; Instan | ZalithID">
+<meta name="twitter:description" content="Cek UUID Minecraft dari username secara instan dan gratis. Masukkan username, dapatkan UUID (dengan dan tanpa strip) plus avatar akun.">
+<meta name="twitter:image" content="assets/og-image.webp">
+<meta name="twitter:image:alt" content="Banner Zalith Launcher 2 — ikon kubus gradient hijau-ungu dengan tulisan Main Minecraft Java di Android">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap"></noscript>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="/" class="brand"><span class="mark"></span> ZalithID</a>
+    <nav class="navlinks">
+      <a href="/">Zalith Launcher 2</a>
+      <a href="#tool">Cek UUID</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="nav-right">
+      <button class="btn btn-primary btn-sm install-pwa-btn" id="installBtn" hidden>⬇ Install App</button>
+      <a href="/#unduh" class="btn btn-ghost btn-sm">Download Launcher</a>
+      <button class="hamburger" id="menuToggle" aria-label="Buka menu" aria-expanded="false"><span></span></button>
+    </div>
+  </div>
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="/">Zalith Launcher 2</a>
+    <a href="#tool">Cek UUID</a>
+    <a href="#faq">FAQ</a>
+    <button class="btn btn-primary btn-sm install-pwa-btn" id="installBtnMobile" hidden>⬇ Install App</button>
+    <a href="/#unduh" class="btn btn-ghost btn-sm">Download Launcher</a>
+  </nav>
+</header>
+
+<main class="wrap">
+
+  <section class="hero" style="padding-bottom:20px;">
+    <div>
+      <div class="breadcrumb"><a href="/">Beranda</a> / <a href="/">Zalith Launcher 2</a> / Cek UUID Minecraft</div>
+      <h1 style="font-size:38px;">Cek <span class="accent">UUID Minecraft</span> dari Username, Instan</h1>
+      <p class="lead">Masukkan username Minecraft Java Edition, dapatkan UUID lengkap (dengan dan tanpa strip) beserta avatar akun. Gratis, tanpa perlu login.</p>
+      <div class="hero-badges">
+        <span class="pill">100% <b>Gratis</b></span>
+        <span class="pill">Hasil <b>Instan</b></span>
+        <span class="pill">Bisa <b>Diinstall</b></span>
+      </div>
+    </div>
+  </section>
+
+  <section id="tool" style="padding-top:0;">
+    <div class="card uuid-tool-card">
+      <form id="uuidForm" class="uuid-form" autocomplete="off">
+        <input
+          type="text"
+          id="usernameInput"
+          class="uuid-input"
+          placeholder="Masukkan username Minecraft, contoh: Notch"
+          maxlength="16"
+          autocapitalize="none"
+          autocorrect="off"
+          spellcheck="false"
+          required
+        >
+        <button type="submit" class="btn btn-primary uuid-submit" id="submitBtn">Cek UUID</button>
+      </form>
+      <div class="uuid-examples">
+        <span style="font-size:12.5px; color:var(--text-faint);">Coba:</span>
+        <button type="button" class="uuid-example-chip" data-username="Notch">Notch</button>
+        <button type="button" class="uuid-example-chip" data-username="jeb_">jeb_</button>
+        <button type="button" class="uuid-example-chip" data-username="Dream">Dream</button>
+      </div>
+
+      <div class="uuid-status" id="uuidStatus" hidden>
+        <span class="uuid-spinner"></span>
+        <span>Mencari akun…</span>
+      </div>
+
+      <div class="uuid-error" id="uuidError" hidden></div>
+
+      <div class="uuid-result" id="uuidResult" hidden>
+        <img class="uuid-avatar" id="uuidAvatar" src="" alt="Avatar akun Minecraft" width="72" height="72">
+        <div class="uuid-result-body">
+          <div class="uuid-result-name" id="uuidUsername"></div>
+
+          <div class="uuid-field">
+            <label>UUID (dengan strip)</label>
+            <div class="uuid-field-row">
+              <code id="uuidDashed"></code>
+              <button type="button" class="uuid-copy-btn" data-copy-target="uuidDashed">Salin</button>
+            </div>
+          </div>
+
+          <div class="uuid-field">
+            <label>UUID (tanpa strip)</label>
+            <div class="uuid-field-row">
+              <code id="uuidRaw"></code>
+              <button type="button" class="uuid-copy-btn" data-copy-target="uuidRaw">Salin</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p style="font-size:12.5px; color:var(--text-faint); margin-top:18px; margin-bottom:0;">
+        Belum tahu apa itu UUID dan kenapa penting? Baca <a class="inline-link" href="apa-itu-uuid-minecraft" style="color:var(--emerald); font-weight:600;">penjelasan lengkapnya di sini</a>.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <div class="eyebrow">Cara kerja</div>
+      <h2>3 Langkah Sederhana</h2>
+      <p>Tidak perlu install apa pun untuk mulai — cukup buka halaman ini di browser.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num"></div>
+        <div>
+          <h4>Masukkan username</h4>
+          <p>Ketik username Minecraft Java Edition yang ingin dicek pada kolom di atas.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num"></div>
+        <div>
+          <h4>Klik "Cek UUID"</h4>
+          <p>Alat akan mencari data akun tersebut dan menampilkan hasilnya dalam hitungan detik.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num"></div>
+        <div>
+          <h4>Salin UUID yang dibutuhkan</h4>
+          <p>Gunakan tombol Salin untuk menyalin UUID dengan atau tanpa strip, sesuai kebutuhan (plugin, whitelist server, dll).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="about-grid">
+      <div class="legal">
+        <div class="eyebrow">Untuk siapa alat ini</div>
+        <h2 style="font-size:28px; margin-bottom:16px;">Berguna untuk Admin Server hingga Developer</h2>
+        <p>UUID sering dibutuhkan di luar sekadar bermain: admin server memakainya untuk whitelist yang tidak berubah walau pemain ganti nama, developer plugin memakainya sebagai kunci data pemain, dan pemain biasa memakainya untuk memastikan akun mana yang sedang mereka cek.</p>
+        <p>Alat ini mengambil data langsung dari layanan publik yang menyimpan riwayat akun Minecraft, jadi hasilnya sesuai dengan akun resmi — bukan sekadar menghasilkan kode acak dari teks yang diketik.</p>
+      </div>
+      <div class="card">
+        <h3 style="font-size:15px; margin-bottom:16px; color:var(--text-dim); text-transform:uppercase; letter-spacing:0.04em; font-weight:700;">Cocok dipakai untuk</h3>
+        <div class="steps" style="gap:0;">
+          <div class="step" style="padding:14px 0;"><div class="step-num" style="width:30px;height:30px;font-size:13px;"></div><div><p style="font-size:14px; margin:0; color:var(--text-dim);">Whitelist server yang tidak putus saat pemain ganti username.</p></div></div>
+          <div class="step" style="padding:14px 0;"><div class="step-num" style="width:30px;height:30px;font-size:13px;"></div><div><p style="font-size:14px; margin:0; color:var(--text-dim);">Konfigurasi plugin/mod yang butuh identitas akun tetap.</p></div></div>
+          <div class="step" style="padding:14px 0;"><div class="step-num" style="width:30px;height:30px;font-size:13px;"></div><div><p style="font-size:14px; margin:0; color:var(--text-dim);">Memastikan avatar/skin yang muncul benar milik akun yang dicari.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="section-head">
+      <div class="eyebrow">FAQ</div>
+      <h2>Pertanyaan Seputar Alat Cek UUID</h2>
+    </div>
+    <div style="max-width:760px; margin:0 auto;" id="faqList">
+      <div class="faq-item">
+        <div class="faq-q">Apakah alat ini gratis? <span class="chev">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Ya, sepenuhnya gratis dan tidak perlu login atau mendaftar akun apa pun.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Apakah username saya disimpan? <span class="chev">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Tidak. Pencarian dikirim langsung dari browser kamu ke layanan pencari akun, dan halaman ini tidak menyimpan riwayat pencarian di server mana pun.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Kenapa username saya tidak ditemukan? <span class="chev">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Biasanya karena salah ketik, akun belum pernah login online-mode, atau akun tersebut memang belum/tidak terdaftar. Coba periksa ejaannya lagi.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Apakah ini berlaku untuk akun Bedrock Edition? <span class="chev">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Tidak. Java Edition dan Bedrock Edition memakai sistem UUID yang terpisah karena keduanya produk berbeda. Alat ini khusus untuk akun Java Edition.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Bisakah alat ini dipasang sebagai aplikasi? <span class="chev">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Bisa. Di Chrome/Edge desktop maupun Android, akan muncul tombol "Install App" di pojok kanan atas setelah halaman selesai dimuat — klik untuk memasangnya seperti aplikasi biasa.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="cta-band">
+      <h2>Sudah Tahu UUID-nya? Saatnya Main</h2>
+      <p>Zalith Launcher 2 menjalankan Minecraft Java Edition langsung di Android, dengan akun yang sama seperti di PC.</p>
+      <a href="/#unduh" class="btn btn-primary">⬇ Download Zalith Launcher 2</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <a href="/" class="brand" style="margin-bottom:14px;"><span class="mark"></span> ZalithID</a>
+        <p style="color:var(--text-dim); font-size:13.5px; max-width:280px;">Panduan independen berbahasa Indonesia untuk Zalith Launcher 2 — download, instalasi, dan troubleshooting lengkap.</p>
+        <div class="social-links">
+          <a href="https://www.youtube.com/channel/UCudfsTo1tZH2USBQSse8iaw" target="_blank" rel="noopener" aria-label="YouTube ZalithID">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12s0-3.4-.44-5a2.8 2.8 0 0 0-2-2C17.9 4.5 12 4.5 12 4.5s-5.9 0-7.56.5a2.8 2.8 0 0 0-2 2C2 8.6 2 12 2 12s0 3.4.44 5a2.8 2.8 0 0 0 2 2C6.1 19.5 12 19.5 12 19.5s5.9 0 7.56-.5a2.8 2.8 0 0 0 2-2C22 15.4 22 12 22 12Z"/><path d="M10 8.6 15.5 12 10 15.4Z" fill="#0a0d12"/></svg>
+          </a>
+          <a href="https://www.instagram.com/zalithid/" target="_blank" rel="noopener" aria-label="Instagram ZalithID">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://x.com/zalithid" target="_blank" rel="noopener" aria-label="X ZalithID">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 4l7.2 8.6L4.4 20h2.3l6-6.9 4.8 6.9H21l-7.5-9L20 4h-2.3l-5.6 6.4L7 4H4z"/></svg>
+          </a>
+          <a href="https://www.pinterest.com/0tuqumb0oed585i0z6vwhp5wvswqs5/" target="_blank" rel="noopener" aria-label="Pinterest ZalithID">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.63 7.86 6.34 9.33-.09-.79-.17-2.01.04-2.88.19-.8 1.22-5.14 1.22-5.14s-.31-.62-.31-1.53c0-1.43.83-2.5 1.87-2.5.88 0 1.3.66 1.3 1.45 0 .88-.56 2.2-.85 3.43-.24 1.02.51 1.86 1.52 1.86 1.82 0 3.22-1.92 3.22-4.69 0-2.45-1.76-4.17-4.28-4.17-2.92 0-4.63 2.19-4.63 4.45 0 .88.34 1.83.76 2.34.08.1.1.19.07.29-.08.32-.25 1.02-.29 1.16-.05.18-.15.22-.35.13-1.3-.6-2.11-2.5-2.11-4.02 0-3.27 2.38-6.28 6.86-6.28 3.6 0 6.4 2.57 6.4 6 0 3.58-2.26 6.46-5.39 6.46-1.05 0-2.04-.55-2.38-1.2l-.65 2.47c-.24.9-.87 2.03-1.3 2.72.98.3 2.01.46 3.09.46 5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h5>Unduh</h5>
+        <ul>
+          <li><a href="/#unduh">Zalith Launcher 2</a></li>
+          <li><a href="plus">Zalith Launcher 2 Plus</a></li>
+          <li><a href="sumber-resmi">GitHub Resmi</a></li>
+          <li><a href="versi-terbaru">Versi Terbaru / Changelog</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h5>Panduan</h5>
+        <ul>
+          <li><a href="/#instalasi">Cara Instalasi</a></li>
+          <li><a href="troubleshooting">Troubleshooting</a></li>
+          <li><a href="apa-itu-uuid-minecraft">Apa Itu UUID Minecraft</a></li>
+          <li><a href="cek-uuid-minecraft">Cek UUID Minecraft</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h5>Lainnya</h5>
+        <ul>
+          <li><a href="tentang-kami">Tentang Kami</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+          <li><a href="apakah-aman">Apakah Aman?</a></li>
+          <li><a href="kebijakan-privasi">Kebijakan Privasi</a></li>
+          <li><a href="syarat-ketentuan">Syarat &amp; Ketentuan</a></li>
+          <li><a href="kontak">Kontak</a></li>
+          <li><a href="peta-situs">Peta Situs</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="disclaimer">
+      Zalith Launcher adalah proyek open source independen dan tidak berafiliasi dengan Mojang Studios atau Microsoft. "Minecraft" adalah merek dagang milik Mojang Synergies AB. Situs ini merupakan panduan pihak ketiga yang tidak resmi. Data UUID diambil dari layanan pihak ketiga (playerdb.co) yang membaca data publik Mojang/Microsoft.
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 ZalithID. Semua hak dilindungi.</span>
+      <span>Dibuat untuk komunitas Minecraft Android Indonesia 🇮🇩</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('menuToggle').addEventListener('click', function(){
+    var nav = document.getElementById('mobileNav');
+    var btn = document.getElementById('menuToggle');
+    var isOpen = nav.classList.toggle('open');
+    btn.classList.toggle('open', isOpen);
+    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+  document.querySelectorAll('.faq-q').forEach(function(q){
+    q.addEventListener('click', function(){
+      var item = q.parentElement;
+      var wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(function(el){ el.classList.remove('open'); });
+      if(!wasOpen){ item.classList.add('open'); }
+    });
+  });
+
+  // ---------- UUID lookup tool ----------
+  (function(){
+    var form = document.getElementById('uuidForm');
+    var input = document.getElementById('usernameInput');
+    var submitBtn = document.getElementById('submitBtn');
+    var statusEl = document.getElementById('uuidStatus');
+    var errorEl = document.getElementById('uuidError');
+    var resultEl = document.getElementById('uuidResult');
+    var avatarEl = document.getElementById('uuidAvatar');
+    var usernameEl = document.getElementById('uuidUsername');
+    var dashedEl = document.getElementById('uuidDashed');
+    var rawEl = document.getElementById('uuidRaw');
+
+    function toDashedUUID(raw){
+      if(!raw || raw.indexOf('-') !== -1) return raw;
+      return raw.replace(/^(.{8})(.{4})(.{4})(.{4})(.{12})$/, '$1-$2-$3-$4-$5');
+    }
+
+    function showError(msg){
+      resultEl.hidden = true;
+      errorEl.hidden = false;
+      errorEl.textContent = msg;
+    }
+
+    function reset(){
+      statusEl.hidden = true;
+      errorEl.hidden = true;
+    }
+
+    function lookup(username){
+      username = (username || '').trim();
+      if(!username){ return; }
+      if(!/^[A-Za-z0-9_]{1,16}$/.test(username)){
+        reset();
+        showError('Username tidak valid. Username Minecraft hanya boleh berisi huruf, angka, dan underscore (maks. 16 karakter).');
+        return;
+      }
+      reset();
+      resultEl.hidden = true;
+      statusEl.hidden = false;
+      submitBtn.disabled = true;
+
+      fetch('https://playerdb.co/api/player/minecraft/' + encodeURIComponent(username))
+        .then(function(res){ return res.json(); })
+        .then(function(json){
+          statusEl.hidden = true;
+          submitBtn.disabled = false;
+          if(!json || json.code !== 'player.found' || !json.data || !json.data.player){
+            showError('Username "' + username + '" tidak ditemukan. Periksa lagi ejaannya.');
+            return;
+          }
+          var player = json.data.player;
+          var dashed = toDashedUUID(player.id || player.raw_id);
+          var raw = (player.raw_id || player.id || '').replace(/-/g, '');
+          avatarEl.src = player.avatar || ('https://crafatar.com/avatars/' + raw + '?overlay');
+          usernameEl.textContent = player.username || username;
+          dashedEl.textContent = dashed;
+          rawEl.textContent = raw;
+          errorEl.hidden = true;
+          resultEl.hidden = false;
+        })
+        .catch(function(){
+          statusEl.hidden = true;
+          submitBtn.disabled = false;
+          showError('Gagal menghubungi layanan pencarian. Coba lagi sebentar lagi.');
+        });
+    }
+
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      lookup(input.value);
+    });
+
+    document.querySelectorAll('.uuid-example-chip').forEach(function(chip){
+      chip.addEventListener('click', function(){
+        input.value = chip.getAttribute('data-username');
+        lookup(input.value);
+      });
+    });
+
+    document.querySelectorAll('.uuid-copy-btn').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        var targetId = btn.getAttribute('data-copy-target');
+        var text = document.getElementById(targetId).textContent;
+        if(!text) return;
+        var done = function(){
+          var original = btn.textContent;
+          btn.textContent = 'Tersalin!';
+          btn.classList.add('copied');
+          setTimeout(function(){ btn.textContent = original; btn.classList.remove('copied'); }, 1500);
+        };
+        if(navigator.clipboard && navigator.clipboard.writeText){
+          navigator.clipboard.writeText(text).then(done).catch(function(){});
+        } else {
+          var ta = document.createElement('textarea');
+          ta.value = text;
+          document.body.appendChild(ta);
+          ta.select();
+          try { document.execCommand('copy'); done(); } catch(e){}
+          document.body.removeChild(ta);
+        }
+      });
+    });
+  })();
+
+  // ---------- PWA install prompt ----------
+  (function(){
+    var deferredPrompt = null;
+    var installBtn = document.getElementById('installBtn');
+    var installBtnMobile = document.getElementById('installBtnMobile');
+
+    window.addEventListener('beforeinstallprompt', function(e){
+      e.preventDefault();
+      deferredPrompt = e;
+      installBtn.hidden = false;
+      installBtnMobile.hidden = false;
+    });
+
+    function doInstall(){
+      if(!deferredPrompt) return;
+      deferredPrompt.prompt();
+      deferredPrompt.userChoice.finally(function(){
+        deferredPrompt = null;
+        installBtn.hidden = true;
+        installBtnMobile.hidden = true;
+      });
+    }
+    installBtn.addEventListener('click', doInstall);
+    installBtnMobile.addEventListener('click', doInstall);
+
+    window.addEventListener('appinstalled', function(){
+      installBtn.hidden = true;
+      installBtnMobile.hidden = true;
+      deferredPrompt = null;
+    });
+
+    if('serviceWorker' in navigator){
+      window.addEventListener('load', function(){
+        navigator.serviceWorker.register('/sw.js', { scope: '/cek-uuid-minecraft' }).catch(function(){});
+      });
+    }
+  })();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "Cek UUID Minecraft - ZalithID",
+  "short_name": "Cek UUID MC",
+  "description": "Cek UUID akun Minecraft dari username secara instan dan gratis. Alat untuk developer, admin server, dan pemain Minecraft.",
+  "start_url": "/cek-uuid-minecraft?source=pwa",
+  "id": "/cek-uuid-minecraft",
+  "scope": "/cek-uuid-minecraft",
+  "display": "standalone",
+  "background_color": "#0a0d12",
+  "theme_color": "#0a0d12",
+  "orientation": "portrait-primary",
+  "lang": "id",
+  "icons": [
+    { "src": "/assets/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/assets/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "/assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

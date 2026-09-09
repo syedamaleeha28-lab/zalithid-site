@@ -348,3 +348,47 @@
   }
   .contact-card .email{ font-family:'JetBrains Mono', monospace; font-size:17px; color:#fff; font-weight:600; }
   .contact-card p{ color:var(--text-dim); font-size:14px; }
+
+  /* ---------- UUID LOOKUP TOOL (cek-uuid-minecraft) ---------- */
+  .uuid-tool-card{ max-width:760px; margin:0 auto; padding:28px; }
+  .uuid-form{ display:flex; gap:10px; flex-wrap:wrap; }
+  .uuid-input{
+    flex:1; min-width:200px; background:var(--surface-2); border:1px solid var(--border); color:var(--text);
+    padding:14px 16px; border-radius:12px; font-size:15px; font-family:'JetBrains Mono', monospace;
+  }
+  .uuid-input:focus{ outline:none; border-color:var(--emerald); box-shadow:0 0 0 3px rgba(52,211,153,0.15); }
+  .uuid-input::placeholder{ color:var(--text-faint); font-family:'Inter', sans-serif; }
+  .uuid-submit{ flex:none; }
+  .uuid-examples{ display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-top:14px; }
+  .uuid-example-chip{
+    font-size:12.5px; padding:5px 12px; border-radius:999px; border:1px solid var(--border);
+    color:var(--text-dim); cursor:pointer; background:var(--surface-2);
+    transition:border-color .15s ease, color .15s ease; font-family:inherit;
+  }
+  .uuid-example-chip:hover{ border-color:rgba(52,211,153,0.4); color:#fff; }
+  .uuid-status{ margin-top:16px; font-size:13.5px; color:var(--text-dim); display:flex; align-items:center; gap:10px; }
+  .uuid-spinner{
+    width:16px; height:16px; border-radius:50%; border:2px solid var(--border);
+    border-top-color:var(--emerald); animation:uuid-spin .7s linear infinite; flex:none;
+  }
+  @keyframes uuid-spin{ to{ transform:rotate(360deg); } }
+  .uuid-error{
+    margin-top:16px; padding:12px 16px; border-radius:10px; background:rgba(242,107,107,0.1);
+    border:1px solid rgba(242,107,107,0.3); color:#ffb4b4; font-size:14px;
+  }
+  .uuid-result{ margin-top:24px; padding-top:24px; border-top:1px solid var(--border-soft); display:flex; gap:20px; flex-wrap:wrap; align-items:flex-start; }
+  .uuid-avatar{ width:72px; height:72px; border-radius:14px; border:1px solid var(--border); background:var(--surface-2); image-rendering:pixelated; flex:none; }
+  .uuid-result-body{ flex:1; min-width:220px; }
+  .uuid-result-name{ font-size:19px; font-weight:800; color:#fff; margin-bottom:14px; }
+  .uuid-field{ margin-bottom:12px; }
+  .uuid-field:last-child{ margin-bottom:0; }
+  .uuid-field label{ display:block; font-size:11.5px; text-transform:uppercase; letter-spacing:0.05em; color:var(--text-faint); font-weight:700; margin-bottom:5px; }
+  .uuid-field-row{ display:flex; align-items:center; gap:8px; background:var(--surface-2); border:1px solid var(--border); border-radius:10px; padding:10px 12px; }
+  .uuid-field-row code{ flex:1; font-family:'JetBrains Mono', monospace; font-size:13.5px; color:var(--text); overflow-x:auto; white-space:nowrap; }
+  .uuid-copy-btn{
+    flex:none; background:transparent; border:1px solid var(--border); color:var(--text-dim);
+    border-radius:8px; padding:6px 10px; font-size:12px; font-weight:700; cursor:pointer; font-family:inherit;
+  }
+  .uuid-copy-btn:hover{ border-color:rgba(52,211,153,0.4); color:var(--emerald); }
+  .uuid-copy-btn.copied{ color:var(--emerald); border-color:rgba(52,211,153,0.4); }
+  @media(max-width:480px){ .uuid-submit{ width:100%; } }
