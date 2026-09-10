@@ -411,6 +411,10 @@
   }
   .tab-panel[hidden]{ display:none; }
 
+  /* Global fix: the [hidden] attribute must always win over any display:flex/block
+     set by a component's own class (uuid-status, uuid-result, skin-result, server-result, etc.) */
+  [hidden]{ display:none !important; }
+
   .uuid-result-actions{ display:flex; gap:10px; flex-wrap:wrap; margin-top:16px; }
 
   /* ---------- Skin viewer ---------- */
