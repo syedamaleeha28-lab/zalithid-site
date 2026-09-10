@@ -392,3 +392,40 @@
   .uuid-copy-btn:hover{ border-color:rgba(52,211,153,0.4); color:var(--emerald); }
   .uuid-copy-btn.copied{ color:var(--emerald); border-color:rgba(52,211,153,0.4); }
   @media(max-width:480px){ .uuid-submit{ width:100%; } }
+
+  /* ---------- Toolkit tabs ---------- */
+  .toolkit-tabs{
+    display:flex; gap:6px; margin-bottom:22px; padding:5px;
+    background:var(--surface-2); border:1px solid var(--border); border-radius:12px;
+    overflow-x:auto;
+  }
+  .toolkit-tab{
+    flex:1 1 0; min-width:0; white-space:nowrap; text-align:center; background:transparent; border:none;
+    color:var(--text-dim); font-family:inherit; font-size:13.5px; font-weight:700;
+    padding:10px 8px; border-radius:9px; cursor:pointer; transition:background 0.15s, color 0.15s;
+  }
+  .toolkit-tab:hover{ color:#fff; }
+  .toolkit-tab.active{
+    background:linear-gradient(135deg, var(--emerald), var(--violet));
+    color:#0a0d12;
+  }
+  .tab-panel[hidden]{ display:none; }
+
+  .uuid-result-actions{ display:flex; gap:10px; flex-wrap:wrap; margin-top:16px; }
+
+  /* ---------- Skin viewer ---------- */
+  .skin-result{ margin-top:24px; padding-top:24px; border-top:1px solid var(--border-soft); display:flex; gap:24px; flex-wrap:wrap; align-items:flex-start; }
+  .skin-render{ width:120px; height:auto; flex:none; image-rendering:pixelated; background:var(--surface-2); border:1px solid var(--border); border-radius:14px; padding:10px; }
+
+  /* ---------- Server status ---------- */
+  .server-result{ margin-top:24px; padding-top:24px; border-top:1px solid var(--border-soft); display:flex; gap:16px; flex-wrap:wrap; align-items:flex-start; }
+  .server-icon{ width:64px; height:64px; border-radius:12px; border:1px solid var(--border); background:var(--surface-2); image-rendering:pixelated; flex:none; }
+  .server-badges{ display:flex; gap:8px; flex-wrap:wrap; margin-bottom:12px; }
+  .server-badge{
+    font-size:12px; font-weight:700; padding:6px 12px; border-radius:999px;
+    background:var(--surface-2); border:1px solid var(--border); color:var(--text-dim);
+  }
+  .server-badge-online{ color:var(--emerald); border-color:rgba(52,211,153,0.4); }
+  .server-badge-offline{ color:#f87171; border-color:rgba(248,113,113,0.4); }
+  .server-badge-muted{ color:var(--text-dim); }
+  .server-motd{ font-family:'JetBrains Mono', monospace; font-size:13px; color:var(--text-dim); background:var(--surface-2); border:1px solid var(--border); border-radius:10px; padding:10px 12px; }

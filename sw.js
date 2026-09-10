@@ -1,7 +1,7 @@
 // Service worker for the "Cek UUID Minecraft" tool (scoped to /cek-uuid-minecraft only).
 // Registered with an explicit narrower scope from cek-uuid-minecraft.html, so it never
 // touches the rest of the ZalithID site.
-const CACHE_NAME = 'zalithid-uuid-tool-v1';
+const CACHE_NAME = 'zalithid-uuid-tool-v2';
 const ASSETS_TO_CACHE = [
   '/cek-uuid-minecraft',
   '/style.css',

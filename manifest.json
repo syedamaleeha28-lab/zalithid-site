@@ -1,7 +1,7 @@
 {
-  "name": "Cek UUID Minecraft - ZalithID",
-  "short_name": "Cek UUID MC",
-  "description": "Cek UUID akun Minecraft dari username secara instan dan gratis. Alat untuk developer, admin server, dan pemain Minecraft.",
+  "name": "Toolkit Minecraft - ZalithID",
+  "short_name": "MC Toolkit",
+  "description": "Toolkit Minecraft gratis: cek UUID dari username, lihat & unduh skin karakter, dan cek status server Java (online, jumlah player, versi).",
   "start_url": "/cek-uuid-minecraft?source=pwa",
   "id": "/cek-uuid-minecraft",
   "scope": "/cek-uuid-minecraft",

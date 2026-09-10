@@ -19,24 +19,24 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="canonical" href="https://zalithid.id/cek-uuid-minecraft">
-<title>Cek UUID Minecraft dari Username — Alat Gratis &amp; Instan | ZalithID</title>
-<meta name="description" content="Cek UUID Minecraft dari username secara instan dan gratis. Masukkan username, dapatkan UUID (dengan dan tanpa strip) plus avatar akun — bisa juga dipasang sebagai aplikasi.">
+<title>Toolkit Minecraft: Cek UUID, Skin & Status Server | ZalithID</title>
+<meta name="description" content="Toolkit Minecraft gratis: cek UUID dari username, lihat & unduh skin karakter, dan cek status server Java (online, player, versi) — semua dalam satu alat, bisa dipasang sebagai aplikasi.">
 <link rel="icon" href="assets/favicon.webp" type="image/webp">
 <link rel="apple-touch-icon" href="assets/favicon.png">
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#0a0d12">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://zalithid.id/cek-uuid-minecraft">
-<meta property="og:title" content="Cek UUID Minecraft dari Username — Alat Gratis &amp; Instan | ZalithID">
-<meta property="og:description" content="Cek UUID Minecraft dari username secara instan dan gratis. Masukkan username, dapatkan UUID (dengan dan tanpa strip) plus avatar akun.">
+<meta property="og:title" content="Toolkit Minecraft: Cek UUID, Skin & Status Server | ZalithID">
+<meta property="og:description" content="Toolkit Minecraft gratis: cek UUID dari username, lihat & unduh skin karakter, dan cek status server Java — semua dalam satu alat.">
 <meta property="og:image" content="assets/og-image.webp">
 <meta property="og:image:alt" content="Banner Zalith Launcher 2 — ikon kubus gradient hijau-ungu dengan tulisan Main Minecraft Java di Android">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="id_ID">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Cek UUID Minecraft dari Username — Alat Gratis &amp; Instan | ZalithID">
-<meta name="twitter:description" content="Cek UUID Minecraft dari username secara instan dan gratis. Masukkan username, dapatkan UUID (dengan dan tanpa strip) plus avatar akun.">
+<meta name="twitter:title" content="Toolkit Minecraft: Cek UUID, Skin & Status Server | ZalithID">
+<meta name="twitter:description" content="Toolkit Minecraft gratis: cek UUID dari username, lihat & unduh skin karakter, dan cek status server Java — semua dalam satu alat.">
 <meta name="twitter:image" content="assets/og-image.webp">
 <meta name="twitter:image:alt" content="Banner Zalith Launcher 2 — ikon kubus gradient hijau-ungu dengan tulisan Main Minecraft Java di Android">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -74,12 +74,12 @@
 
   <section class="hero" style="padding-bottom:20px;">
     <div>
-      <div class="breadcrumb"><a href="/">Beranda</a> / <a href="/">Zalith Launcher 2</a> / Cek UUID Minecraft</div>
-      <h1 style="font-size:38px;">Cek <span class="accent">UUID Minecraft</span> dari Username, Instan</h1>
-      <p class="lead">Masukkan username Minecraft Java Edition, dapatkan UUID lengkap (dengan dan tanpa strip) beserta avatar akun. Gratis, tanpa perlu login.</p>
+      <div class="breadcrumb"><a href="/">Beranda</a> / <a href="/">Zalith Launcher 2</a> / Toolkit Minecraft</div>
+      <h1 style="font-size:38px;">Toolkit <span class="accent">Minecraft</span>: UUID, Skin & Status Server</h1>
+      <p class="lead">Tiga alat dalam satu tempat: cek UUID dari username, lihat &amp; unduh skin karakter, dan cek status server Java (online, jumlah player, versi). Gratis, tanpa perlu login.</p>
       <div class="hero-badges">
+        <span class="pill">3 Alat <b>Sekaligus</b></span>
         <span class="pill">100% <b>Gratis</b></span>
-        <span class="pill">Hasil <b>Instan</b></span>
         <span class="pill">Bisa <b>Diinstall</b></span>
       </div>
     </div>
@@ -87,60 +87,155 @@
 
   <section id="tool" style="padding-top:0;">
     <div class="card uuid-tool-card">
-      <form id="uuidForm" class="uuid-form" autocomplete="off">
-        <input
-          type="text"
-          id="usernameInput"
-          class="uuid-input"
-          placeholder="Masukkan username Minecraft, contoh: Notch"
-          maxlength="16"
-          autocapitalize="none"
-          autocorrect="off"
-          spellcheck="false"
-          required
-        >
-        <button type="submit" class="btn btn-primary uuid-submit" id="submitBtn">Cek UUID</button>
-      </form>
-      <div class="uuid-examples">
-        <span style="font-size:12.5px; color:var(--text-faint);">Coba:</span>
-        <button type="button" class="uuid-example-chip" data-username="Notch">Notch</button>
-        <button type="button" class="uuid-example-chip" data-username="jeb_">jeb_</button>
-        <button type="button" class="uuid-example-chip" data-username="Dream">Dream</button>
+
+      <div class="toolkit-tabs" role="tablist" aria-label="Pilih alat">
+        <button type="button" class="toolkit-tab active" id="tabBtn-uuid" role="tab" aria-selected="true" aria-controls="panel-uuid" data-panel="uuid">🔎 UUID</button>
+        <button type="button" class="toolkit-tab" id="tabBtn-skin" role="tab" aria-selected="false" aria-controls="panel-skin" data-panel="skin">🧍 Skin</button>
+        <button type="button" class="toolkit-tab" id="tabBtn-server" role="tab" aria-selected="false" aria-controls="panel-server" data-panel="server">🌐 Server</button>
       </div>
 
-      <div class="uuid-status" id="uuidStatus" hidden>
-        <span class="uuid-spinner"></span>
-        <span>Mencari akun…</span>
-      </div>
+      <!-- ===== Panel 1: Cek UUID ===== -->
+      <div class="tab-panel" id="panel-uuid" role="tabpanel" aria-labelledby="tabBtn-uuid">
+        <form id="uuidForm" class="uuid-form" autocomplete="off">
+          <input
+            type="text"
+            id="usernameInput"
+            class="uuid-input"
+            placeholder="Masukkan username Minecraft, contoh: Notch"
+            maxlength="16"
+            autocapitalize="none"
+            autocorrect="off"
+            spellcheck="false"
+            required
+          >
+          <button type="submit" class="btn btn-primary uuid-submit" id="submitBtn">Cek UUID</button>
+        </form>
+        <div class="uuid-examples">
+          <span style="font-size:12.5px; color:var(--text-faint);">Coba:</span>
+          <button type="button" class="uuid-example-chip" data-username="Notch">Notch</button>
+          <button type="button" class="uuid-example-chip" data-username="jeb_">jeb_</button>
+          <button type="button" class="uuid-example-chip" data-username="Dream">Dream</button>
+        </div>
 
-      <div class="uuid-error" id="uuidError" hidden></div>
+        <div class="uuid-status" id="uuidStatus" hidden>
+          <span class="uuid-spinner"></span>
+          <span>Mencari akun…</span>
+        </div>
 
-      <div class="uuid-result" id="uuidResult" hidden>
-        <img class="uuid-avatar" id="uuidAvatar" src="" alt="Avatar akun Minecraft" width="72" height="72">
-        <div class="uuid-result-body">
-          <div class="uuid-result-name" id="uuidUsername"></div>
+        <div class="uuid-error" id="uuidError" hidden></div>
 
-          <div class="uuid-field">
-            <label>UUID (dengan strip)</label>
-            <div class="uuid-field-row">
-              <code id="uuidDashed"></code>
-              <button type="button" class="uuid-copy-btn" data-copy-target="uuidDashed">Salin</button>
+        <div class="uuid-result" id="uuidResult" hidden>
+          <img class="uuid-avatar" id="uuidAvatar" src="" alt="Avatar akun Minecraft" width="72" height="72">
+          <div class="uuid-result-body">
+            <div class="uuid-result-name" id="uuidUsername"></div>
+
+            <div class="uuid-field">
+              <label>UUID (dengan strip)</label>
+              <div class="uuid-field-row">
+                <code id="uuidDashed"></code>
+                <button type="button" class="uuid-copy-btn" data-copy-target="uuidDashed">Salin</button>
+              </div>
+            </div>
+
+            <div class="uuid-field">
+              <label>UUID (tanpa strip)</label>
+              <div class="uuid-field-row">
+                <code id="uuidRaw"></code>
+                <button type="button" class="uuid-copy-btn" data-copy-target="uuidRaw">Salin</button>
+              </div>
+            </div>
+
+            <div class="uuid-result-actions">
+              <button type="button" class="btn btn-ghost btn-sm" id="uuidShareBtn">📤 Bagikan</button>
+              <button type="button" class="btn btn-ghost btn-sm" id="uuidToSkinBtn">🧍 Lihat Skin Akun Ini</button>
             </div>
           </div>
+        </div>
 
-          <div class="uuid-field">
-            <label>UUID (tanpa strip)</label>
-            <div class="uuid-field-row">
-              <code id="uuidRaw"></code>
-              <button type="button" class="uuid-copy-btn" data-copy-target="uuidRaw">Salin</button>
+        <p style="font-size:12.5px; color:var(--text-faint); margin-top:18px; margin-bottom:0;">
+          Belum tahu apa itu UUID dan kenapa penting? Baca <a class="inline-link" href="apa-itu-uuid-minecraft" style="color:var(--emerald); font-weight:600;">penjelasan lengkapnya di sini</a>.
+        </p>
+      </div>
+
+      <!-- ===== Panel 2: Skin Viewer ===== -->
+      <div class="tab-panel" id="panel-skin" role="tabpanel" aria-labelledby="tabBtn-skin" hidden>
+        <form id="skinForm" class="uuid-form" autocomplete="off">
+          <input
+            type="text"
+            id="skinInput"
+            class="uuid-input"
+            placeholder="Username Minecraft, contoh: Notch"
+            maxlength="16"
+            autocapitalize="none"
+            autocorrect="off"
+            spellcheck="false"
+            required
+          >
+          <button type="submit" class="btn btn-primary uuid-submit" id="skinSubmitBtn">Lihat Skin</button>
+        </form>
+
+        <div class="uuid-status" id="skinStatus" hidden>
+          <span class="uuid-spinner"></span>
+          <span>Mengambil skin…</span>
+        </div>
+
+        <div class="uuid-error" id="skinError" hidden></div>
+
+        <div class="skin-result" id="skinResult" hidden>
+          <img class="skin-render" id="skinRender" src="" alt="Render skin karakter Minecraft" width="180" height="360">
+          <div class="uuid-result-body">
+            <div class="uuid-result-name" id="skinUsername"></div>
+            <p style="font-size:13.5px; color:var(--text-dim); margin:0 0 14px;">Render pose berjalan lengkap, termasuk lapisan luar (topi, jaket, dll).</p>
+            <div class="uuid-result-actions">
+              <a class="btn btn-ghost btn-sm" id="skinDownloadBtn" href="#" download target="_blank" rel="noopener">⬇ Unduh Tekstur Skin (PNG)</a>
+              <button type="button" class="btn btn-ghost btn-sm" id="skinShareBtn">📤 Bagikan</button>
             </div>
           </div>
         </div>
       </div>
 
-      <p style="font-size:12.5px; color:var(--text-faint); margin-top:18px; margin-bottom:0;">
-        Belum tahu apa itu UUID dan kenapa penting? Baca <a class="inline-link" href="apa-itu-uuid-minecraft" style="color:var(--emerald); font-weight:600;">penjelasan lengkapnya di sini</a>.
-      </p>
+      <!-- ===== Panel 3: Status Server ===== -->
+      <div class="tab-panel" id="panel-server" role="tabpanel" aria-labelledby="tabBtn-server" hidden>
+        <form id="serverForm" class="uuid-form" autocomplete="off">
+          <input
+            type="text"
+            id="serverInput"
+            class="uuid-input"
+            placeholder="Alamat server, contoh: hypixel.net"
+            autocapitalize="none"
+            autocorrect="off"
+            spellcheck="false"
+            required
+          >
+          <button type="submit" class="btn btn-primary uuid-submit" id="serverSubmitBtn">Cek Status</button>
+        </form>
+        <div class="uuid-examples">
+          <span style="font-size:12.5px; color:var(--text-faint);">Coba:</span>
+          <button type="button" class="uuid-example-chip" data-server="hypixel.net">hypixel.net</button>
+          <button type="button" class="uuid-example-chip" data-server="2b2t.org">2b2t.org</button>
+        </div>
+
+        <div class="uuid-status" id="serverStatus" hidden>
+          <span class="uuid-spinner"></span>
+          <span>Menghubungi server…</span>
+        </div>
+
+        <div class="uuid-error" id="serverError" hidden></div>
+
+        <div class="server-result" id="serverResult" hidden>
+          <img class="server-icon" id="serverIcon" src="" alt="Ikon server" width="64" height="64" hidden>
+          <div class="uuid-result-body">
+            <div class="uuid-result-name" id="serverAddress"></div>
+            <div class="server-badges">
+              <span class="server-badge" id="serverOnlineBadge"></span>
+              <span class="server-badge server-badge-muted" id="serverVersionBadge"></span>
+              <span class="server-badge server-badge-muted" id="serverPlayersBadge"></span>
+            </div>
+            <div class="server-motd" id="serverMotd"></div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -220,6 +315,14 @@
         <div class="faq-q">Bisakah alat ini dipasang sebagai aplikasi? <span class="chev">+</span></div>
         <div class="faq-a"><div class="faq-a-inner">Bisa. Di Chrome/Edge desktop maupun Android, akan muncul tombol "Install App" di pojok kanan atas setelah halaman selesai dimuat — klik untuk memasangnya seperti aplikasi biasa.</div></div>
       </div>
+      <div class="faq-item">
+        <div class="faq-q">Bagaimana cara melihat skin karakter Minecraft saya? <span class="chev">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Buka tab "Lihat Skin" di atas, masukkan username, lalu klik "Lihat Skin". Kamu akan melihat render karakter lengkap dan bisa mengunduh tekstur skin-nya dalam format PNG.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Apa itu fitur Cek Status Server? <span class="chev">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Fitur ini menunjukkan apakah sebuah server Minecraft Java sedang online, berapa jumlah pemain yang aktif, versi server, dan MOTD (pesan sambutan) — berguna sebelum bergabung ke server tertentu.</div></div>
+      </div>
     </div>
   </section>
 
@@ -286,7 +389,7 @@
       </div>
     </div>
     <div class="disclaimer">
-      Zalith Launcher adalah proyek open source independen dan tidak berafiliasi dengan Mojang Studios atau Microsoft. "Minecraft" adalah merek dagang milik Mojang Synergies AB. Situs ini merupakan panduan pihak ketiga yang tidak resmi. Data UUID diambil dari layanan pihak ketiga (playerdb.co) yang membaca data publik Mojang/Microsoft.
+      Zalith Launcher adalah proyek open source independen dan tidak berafiliasi dengan Mojang Studios atau Microsoft. "Minecraft" adalah merek dagang milik Mojang Synergies AB. Situs ini merupakan panduan pihak ketiga yang tidak resmi. Data UUID dan skin diambil dari layanan pihak ketiga (playerdb.co, crafatar.com) yang membaca data publik Mojang/Microsoft, dan data status server diambil dari api.mcsrvstat.us.
     </div>
     <div class="foot-bottom">
       <span>© 2026 ZalithID. Semua hak dilindungi.</span>
@@ -312,6 +415,40 @@
     });
   });
 
+  // ---------- Toolkit tab switching ----------
+  (function(){
+    var tabButtons = document.querySelectorAll('.toolkit-tab');
+    var panels = {
+      uuid: document.getElementById('panel-uuid'),
+      skin: document.getElementById('panel-skin'),
+      server: document.getElementById('panel-server')
+    };
+
+    function activateTab(name, prefill){
+      tabButtons.forEach(function(btn){
+        var isActive = btn.getAttribute('data-panel') === name;
+        btn.classList.toggle('active', isActive);
+        btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
+      });
+      Object.keys(panels).forEach(function(key){
+        panels[key].hidden = key !== name;
+      });
+      if(name === 'skin' && prefill){
+        var skinInput = document.getElementById('skinInput');
+        skinInput.value = prefill;
+        if(typeof window.__lookupSkin === 'function'){ window.__lookupSkin(prefill); }
+      }
+    }
+
+    tabButtons.forEach(function(btn){
+      btn.addEventListener('click', function(){
+        activateTab(btn.getAttribute('data-panel'));
+      });
+    });
+
+    window.__activateToolkitTab = activateTab;
+  })();
+
   // ---------- UUID lookup tool ----------
   (function(){
     var form = document.getElementById('uuidForm');
@@ -324,6 +461,9 @@
     var usernameEl = document.getElementById('uuidUsername');
     var dashedEl = document.getElementById('uuidDashed');
     var rawEl = document.getElementById('uuidRaw');
+    var shareBtn = document.getElementById('uuidShareBtn');
+    var toSkinBtn = document.getElementById('uuidToSkinBtn');
+    var lastLookedUpUsername = '';
 
     function toDashedUUID(raw){
       if(!raw || raw.indexOf('-') !== -1) return raw;
@@ -372,6 +512,7 @@
           rawEl.textContent = raw;
           errorEl.hidden = true;
           resultEl.hidden = false;
+          lastLookedUpUsername = player.username || username;
         })
         .catch(function(){
           statusEl.hidden = true;
@@ -413,6 +554,196 @@
           try { document.execCommand('copy'); done(); } catch(e){}
           document.body.removeChild(ta);
         }
+      });
+    });
+
+    function shareText(title, text){
+      if(navigator.share){
+        navigator.share({ title: title, text: text, url: 'https://zalithid.id/cek-uuid-minecraft' }).catch(function(){});
+        return;
+      }
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(text + '\n\nhttps://zalithid.id/cek-uuid-minecraft');
+        var original = shareBtn.textContent;
+        shareBtn.textContent = 'Tersalin!';
+        setTimeout(function(){ shareBtn.textContent = original; }, 1500);
+      }
+    }
+
+    if(shareBtn){
+      shareBtn.addEventListener('click', function(){
+        shareText(
+          'UUID Minecraft: ' + usernameEl.textContent,
+          usernameEl.textContent + ' → UUID: ' + dashedEl.textContent
+        );
+      });
+    }
+
+    if(toSkinBtn){
+      toSkinBtn.addEventListener('click', function(){
+        var name = usernameEl.textContent;
+        if(name && window.__activateToolkitTab){ window.__activateToolkitTab('skin', name); }
+      });
+    }
+  })();
+
+  // ---------- Skin viewer tool ----------
+  (function(){
+    var form = document.getElementById('skinForm');
+    var input = document.getElementById('skinInput');
+    var submitBtn = document.getElementById('skinSubmitBtn');
+    var statusEl = document.getElementById('skinStatus');
+    var errorEl = document.getElementById('skinError');
+    var resultEl = document.getElementById('skinResult');
+    var renderEl = document.getElementById('skinRender');
+    var usernameEl = document.getElementById('skinUsername');
+    var downloadBtn = document.getElementById('skinDownloadBtn');
+    var shareBtn = document.getElementById('skinShareBtn');
+
+    function showError(msg){
+      resultEl.hidden = true;
+      errorEl.hidden = false;
+      errorEl.textContent = msg;
+    }
+
+    function lookupSkin(username){
+      username = (username || '').trim();
+      if(!username){ return; }
+      if(!/^[A-Za-z0-9_]{1,16}$/.test(username)){
+        errorEl.hidden = false;
+        errorEl.textContent = 'Username tidak valid. Username Minecraft hanya boleh berisi huruf, angka, dan underscore (maks. 16 karakter).';
+        return;
+      }
+      errorEl.hidden = true;
+      resultEl.hidden = true;
+      statusEl.hidden = false;
+      submitBtn.disabled = true;
+
+      fetch('https://playerdb.co/api/player/minecraft/' + encodeURIComponent(username))
+        .then(function(res){ return res.json(); })
+        .then(function(json){
+          statusEl.hidden = true;
+          submitBtn.disabled = false;
+          if(!json || json.code !== 'player.found' || !json.data || !json.data.player){
+            showError('Username "' + username + '" tidak ditemukan. Periksa lagi ejaannya.');
+            return;
+          }
+          var player = json.data.player;
+          var raw = (player.raw_id || player.id || '').replace(/-/g, '');
+          renderEl.src = 'https://crafatar.com/renders/body/' + raw + '?overlay&scale=8';
+          usernameEl.textContent = player.username || username;
+          downloadBtn.href = 'https://crafatar.com/skins/' + raw;
+          if(shareBtn){
+            shareBtn.onclick = function(){
+              var text = 'Lihat skin Minecraft ' + (player.username || username);
+              if(navigator.share){
+                navigator.share({ title: text, url: 'https://zalithid.id/cek-uuid-minecraft' }).catch(function(){});
+              } else if(navigator.clipboard){
+                navigator.clipboard.writeText(text + '\n\nhttps://zalithid.id/cek-uuid-minecraft');
+              }
+            };
+          }
+          errorEl.hidden = true;
+          resultEl.hidden = false;
+        })
+        .catch(function(){
+          statusEl.hidden = true;
+          submitBtn.disabled = false;
+          showError('Gagal mengambil data skin. Coba lagi sebentar lagi.');
+        });
+    }
+
+    window.__lookupSkin = lookupSkin;
+
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      lookupSkin(input.value);
+    });
+  })();
+
+  // ---------- Server status tool ----------
+  (function(){
+    var form = document.getElementById('serverForm');
+    var input = document.getElementById('serverInput');
+    var submitBtn = document.getElementById('serverSubmitBtn');
+    var statusEl = document.getElementById('serverStatus');
+    var errorEl = document.getElementById('serverError');
+    var resultEl = document.getElementById('serverResult');
+    var iconEl = document.getElementById('serverIcon');
+    var addressEl = document.getElementById('serverAddress');
+    var onlineBadge = document.getElementById('serverOnlineBadge');
+    var versionBadge = document.getElementById('serverVersionBadge');
+    var playersBadge = document.getElementById('serverPlayersBadge');
+    var motdEl = document.getElementById('serverMotd');
+
+    function showError(msg){
+      resultEl.hidden = true;
+      errorEl.hidden = false;
+      errorEl.textContent = msg;
+    }
+
+    function checkServer(address){
+      address = (address || '').trim();
+      if(!address){ return; }
+      errorEl.hidden = true;
+      resultEl.hidden = true;
+      statusEl.hidden = false;
+      submitBtn.disabled = true;
+
+      fetch('https://api.mcsrvstat.us/3/' + encodeURIComponent(address))
+        .then(function(res){ return res.json(); })
+        .then(function(json){
+          statusEl.hidden = true;
+          submitBtn.disabled = false;
+          if(!json){
+            showError('Gagal memeriksa server "' + address + '".');
+            return;
+          }
+          addressEl.textContent = address;
+          if(json.online){
+            onlineBadge.textContent = '● Online';
+            onlineBadge.className = 'server-badge server-badge-online';
+            var version = (json.version && (json.version.name_clean || json.version)) || 'Tidak diketahui';
+            versionBadge.textContent = 'Versi: ' + version;
+            var players = json.players ? (json.players.online + ' / ' + json.players.max) : '-';
+            playersBadge.textContent = 'Pemain: ' + players;
+            var motdLines = (json.motd && json.motd.clean) ? json.motd.clean.join(' ') : '';
+            motdEl.textContent = motdLines;
+            motdEl.hidden = !motdLines;
+            if(json.icon){
+              iconEl.src = json.icon;
+              iconEl.hidden = false;
+            } else {
+              iconEl.hidden = true;
+            }
+          } else {
+            onlineBadge.textContent = '● Offline';
+            onlineBadge.className = 'server-badge server-badge-offline';
+            versionBadge.textContent = '';
+            playersBadge.textContent = '';
+            motdEl.hidden = true;
+            iconEl.hidden = true;
+          }
+          errorEl.hidden = true;
+          resultEl.hidden = false;
+        })
+        .catch(function(){
+          statusEl.hidden = true;
+          submitBtn.disabled = false;
+          showError('Gagal menghubungi layanan pengecekan server. Coba lagi sebentar lagi.');
+        });
+    }
+
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      checkServer(input.value);
+    });
+
+    document.querySelectorAll('#panel-server .uuid-example-chip').forEach(function(chip){
+      chip.addEventListener('click', function(){
+        var addr = chip.getAttribute('data-server');
+        input.value = addr;
+        checkServer(addr);
       });
     });
   })();
