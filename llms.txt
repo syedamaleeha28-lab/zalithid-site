@@ -10,6 +10,12 @@ ZalithID menyediakan panduan lengkap instalasi, mod, shader, troubleshooting, da
 - [Zalith Launcher 2 Plus](https://zalithid.id/plus): Fork komunitas dengan fitur tambahan.
 - [Sumber Resmi & GitHub](https://zalithid.id/sumber-resmi): Cara memverifikasi sumber resmi dan menghindari APK tidak resmi.
 - [Versi Terbaru / Changelog](https://zalithid.id/versi-terbaru): Riwayat rilis dan versi terbaru.
+- [Blog](https://zalithid.id/blog): Ringkasan rilis, tips performa, dan panduan mod/shader terbaru, dikelompokkan per topik.
+
+## Blog
+
+- [Zalith Launcher 2.4.11: Kontrol Joystick Baru & Perbaikan Bug](https://zalithid.id/zalith-launcher-2-4-11-rilis): Catatan rilis 2.4.11 — kontrol joystick disematkan ke layout kustom, fix crash pagination dan stabilitas multiplayer Terracotta.
+- [Zalith Launcher 2.4.10: Renderer Kopper Zink & Info Mod Detail](https://zalithid.id/zalith-launcher-2-4-10-update): Catatan rilis 2.4.10 — renderer VulkanZink diganti Kopper Zink, info mod lebih detail, dukungan Minecraft 26.2, dan perbaikan bug.
 
 ## Panduan Mod & Shader
 
