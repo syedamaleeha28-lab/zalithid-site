@@ -24,6 +24,7 @@ ZalithID menyediakan panduan lengkap instalasi, mod, shader, troubleshooting, da
 - [5 Shader Terbaik](https://zalithid.id/5-shader-terbaik-minecraft-java-android): Daftar shader terbaik untuk Minecraft Java Android.
 - [Forge Mod Loader](https://zalithid.id/forge-mod-loader-zalith-launcher-2): Cara enable Forge dan cari mod berbasis Forge.
 - [OptiFine/OptiFabric/OptiForge](https://zalithid.id/optifine-zalith-launcher-2): Status ketersediaan OptiFine per versi Minecraft.
+- [Resource Pack / Texture Pack](https://zalithid.id/resource-pack-zalith-launcher-2): Cara pasang resource pack, rekomendasi pack populer, dan cara menggabungkannya dengan shader.
 
 ## Perbandingan & Alternatif
 
