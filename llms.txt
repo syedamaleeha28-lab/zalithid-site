@@ -16,6 +16,9 @@ ZalithID menyediakan panduan lengkap instalasi, mod, shader, troubleshooting, da
 
 - [Zalith Launcher 2.4.11: Kontrol Joystick Baru & Perbaikan Bug](https://zalithid.id/zalith-launcher-2-4-11-rilis): Catatan rilis 2.4.11 — kontrol joystick disematkan ke layout kustom, fix crash pagination dan stabilitas multiplayer Terracotta.
 - [Zalith Launcher 2.4.10: Renderer Kopper Zink & Info Mod Detail](https://zalithid.id/zalith-launcher-2-4-10-update): Catatan rilis 2.4.10 — renderer VulkanZink diganti Kopper Zink, info mod lebih detail, dukungan Minecraft 26.2, dan perbaikan bug.
+- [Zalith Launcher 2 Versi 2.3.3: Kenapa Masih Banyak Dicari?](https://zalithid.id/zalith-launcher-2-3-3-versi-lama): Changelog resmi versi 2.3.3 (14 April 2024), alasan versi ini masih ramai dicari, dan perbandingan dengan versi terbaru.
+- [JVM Arguments & Render Backend: Panduan Anti-Lag](https://zalithid.id/jvm-arguments-renderer-zalith-launcher-2): Cara mengatur alokasi RAM (JVM arguments), memilih render backend Vulkan/OpenGL/Zink, dan pengaruh arsitektur 32-bit/64-bit ke performa.
+- [Cara Ganti Skin, Atur Kontrol Sentuh & Main Offline](https://zalithid.id/ganti-skin-kontrol-offline-zalith-launcher-2): Panduan ganti skin Minecraft lewat akun Microsoft, kustomisasi kontrol sentuh, dan batas mode offline.
 
 ## Panduan Mod & Shader
 
