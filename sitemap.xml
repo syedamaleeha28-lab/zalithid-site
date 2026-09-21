@@ -145,6 +145,36 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://zalithid.id/fabric-mod-loader-zalith-launcher-2</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://zalithid.id/mod-loader-zalith-launcher-2</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://zalithid.id/main-multiplayer-zalith-launcher-2</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://zalithid.id/login-microsoft-gagal-zalith-launcher-2</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://zalithid.id/zalith-launcher-ios-pc-play-store</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://zalithid.id/zalith-vs-mojo-launcher</loc>
     <lastmod>2026-08-28</lastmod>
     <changefreq>monthly</changefreq>

@@ -26,6 +26,8 @@ ZalithID menyediakan panduan lengkap instalasi, mod, shader, troubleshooting, da
 - [Iris Shaders](https://zalithid.id/iris-shaders-zalith-launcher-2): Cara install shader Iris.
 - [5 Shader Terbaik](https://zalithid.id/5-shader-terbaik-minecraft-java-android): Daftar shader terbaik untuk Minecraft Java Android.
 - [Forge Mod Loader](https://zalithid.id/forge-mod-loader-zalith-launcher-2): Cara enable Forge dan cari mod berbasis Forge.
+- [Fabric Mod Loader](https://zalithid.id/fabric-mod-loader-zalith-launcher-2): Cara enable Fabric, perbedaannya dengan Legacy Fabric, dan cari mod berbasis Fabric.
+- [Semua Mod Loader](https://zalithid.id/mod-loader-zalith-launcher-2): Perbandingan Forge vs Fabric vs NeoForge vs OptiFine dan cara memilih yang tepat.
 - [OptiFine/OptiFabric/OptiForge](https://zalithid.id/optifine-zalith-launcher-2): Status ketersediaan OptiFine per versi Minecraft.
 - [Resource Pack / Texture Pack](https://zalithid.id/resource-pack-zalith-launcher-2): Cara pasang resource pack, rekomendasi pack populer, dan cara menggabungkannya dengan shader.
 
@@ -48,6 +50,12 @@ ZalithID menyediakan panduan lengkap instalasi, mod, shader, troubleshooting, da
 - [Apakah Perlu Install Java Terpisah?](https://zalithid.id/apakah-perlu-java-terpisah)
 - [Apa itu UUID Minecraft?](https://zalithid.id/apa-itu-uuid-minecraft)
 - [Troubleshooting](https://zalithid.id/troubleshooting)
+- [Login Microsoft Gagal](https://zalithid.id/login-microsoft-gagal-zalith-launcher-2): Diagnosis dan solusi bertahap untuk login akun Microsoft yang gagal/macet.
+- [Zalith Launcher di iOS, PC, atau Play Store?](https://zalithid.id/zalith-launcher-ios-pc-play-store): Status ketersediaan resmi per platform.
+
+## Multiplayer
+
+- [Cara Main Multiplayer Bareng Teman](https://zalithid.id/main-multiplayer-zalith-launcher-2): Join server, Open to LAN, dan kenapa harus sesama pemain Java Edition.
 
 ## Optional
 
